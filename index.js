@@ -14,8 +14,11 @@ module.exports = {
     
   },
   processMessage(message, queue) {
-    log.info("processMessage")
-    log.info(message)
+    if(message.type == 'sitespeedio.setup'){
+      //queue.postMessage(this.make('test_plugin_setup'));
+      log.info(message) 
+    }
+    
     
   },
   close(options, errors) {
