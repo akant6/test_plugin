@@ -15,7 +15,7 @@ module.exports = {
   },
   processMessage(message, queue) {
     log.info("processMessage")
-    queue.postMessage(this.make('test_plugin', {}))
+    log.info(message)
     
   },
   close(options, errors) {
