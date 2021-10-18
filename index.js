@@ -14,7 +14,13 @@ module.exports = {
     
   },
   processMessage(message, queue) {
-    log.info(message) 
+   if(message.type == 'pagexray.pageSummary'){
+   var obj = JSON.parse(message);
+   for (const [key, value] of Object.entries(obj)) {
+     log.info(key);
+   }
+   }
+   //log.info(message) 
  },
   close(options, errors) {
     log.info(options.test_plugin.value)
