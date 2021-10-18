@@ -17,7 +17,7 @@ module.exports = {
    
    //log.info(message)
    
-   var keys = JSON.parse(message);
+   var keys = message;
    //for (const [key, value] of Object.entries(obj)) {
    //  console.log(key);
    //}
